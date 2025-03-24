@@ -1,5 +1,6 @@
 from statistics import mean, variance, pvariance
-import statistics 
+import statistics
+import unittest
 from statzcw.stats import *
 from sys import argv
 

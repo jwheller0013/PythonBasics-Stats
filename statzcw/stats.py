@@ -24,7 +24,7 @@ def zmedian(data: List[float]) -> float :
 
 def zvariance(data: List[float]) -> float :
     pass
-    n = data.count() - 1
+    n = len(data) - 1
     mean = sum(data)/n
     deviations = []
     for xi in data:
@@ -42,9 +42,15 @@ def zstderr(data: List[float]) -> float :
 
 def cov(a, b):
     pass
+    sum = 0
+    if len(a) == len(b):
+        for i in range(0, len(a)):
+            sum += ((a[i] - zmean(a)) * (b[i]) - zmean(b))
+        return sum/(len(a) - 1)
 
 def zcorr(datax: List[float], datay: List[float]) -> float :
     pass
+
 
 
 def readDataFile(file):
