@@ -50,7 +50,7 @@ def cov(a, b):
 
 def zcorr(datax: List[float], datay: List[float]) -> float :
     pass
-
+    return cov(datax, datay)/(zstddev(datax) * zstddev(datay))
 
 
 def readDataFile(file):

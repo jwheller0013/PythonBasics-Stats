@@ -65,15 +65,16 @@ test_var = zvariance(test_list)
 print(test_var, test_list)
 # assert test_var == 13.888888888888891
 # assert zerr == zstderr(data1)
+print(zstderr(data1))
 res = statistics.variance(test_list)
 # printing result
 print("The statistics.variance of list is : " + str(res))
 
 if __name__ == "__main__":
-    #print("var of data0", zvariance(data0))
-    #print("corr of data0", zcorr(data0,data2))
+    print("var of data0", zvariance(data0))
+    print("corr of data0", zcorr(data0,data2))
     z = readDataSets(argv[1:])
-    # print("z", z)
+    print("z", z)
     print("statzcw")
     for k, v in z.items():
         print(k)
