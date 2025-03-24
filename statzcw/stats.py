@@ -3,7 +3,7 @@ from typing import List
 
 def zcount(data: List[float]) -> float :
     pass
-    return sum(data)
+    return len(data)
 
 def zmean(data: List[float]) -> float :
     pass
@@ -19,17 +19,17 @@ def zmode(data: List[float]) -> float :
 
 def zmedian(data: List[float]) -> float :
     pass
-    middle = len(data)//2
-    return data(middle)
+    middle = (len(data))//2
+    return data[middle]
 
 def zvariance(data: List[float]) -> float :
     pass
-    n = len(data) - 1
+    n = len(data)
     mean = sum(data)/n
     deviations = []
     for xi in data:
-        deviations.append(math.sqrt(abs(mean - xi)))
-    return sum(deviations)/n
+        deviations.append((abs(mean - xi)) ** 2)
+    return sum(deviations)/(n-1)
 	
 def zstddev(data: List[float]) -> float :
     # sqrt of variance
@@ -70,3 +70,8 @@ def readDataSets(files):
         twoLists = readDataFile(file)
         data[file] = twoLists
     return data
+
+# data0 = [1.0, 2.0, 3.0, 4.0, 5.0]
+# data2 = [1.0, 2.0, 2.0, 4.0, 5.0]
+#
+# print(zmedian(data0))
